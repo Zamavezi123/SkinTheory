@@ -40,13 +40,13 @@ build timeline. Add more rows here as you keep working.)*
 Tested using Chrome DevTools responsive mode at three breakpoints:
 
 ### Desktop (1440px)
-![Desktop view](screenshots/desktop.png.png)
+![Desktop view](screenshots/desktop.png)
 
 ### Tablet (768px)
-![Tablet view](screenshots/tablet.png.png)
+![Tablet view](screenshots/tablet.png)
 
 ### Mobile (400px)
-![Mobile view](screenshots/mobile.png.png)
+![Mobile view](screenshots/mobile.png)
 
 ## References
 
