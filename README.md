@@ -35,8 +35,6 @@ build timeline. Add more rows here as you keep working.)*
 
 ### Responsive Design Testing
 
-*## Responsive Design Testing
-
 Tested using Chrome DevTools responsive mode at three breakpoints:
 
 ### Desktop (1440px)
