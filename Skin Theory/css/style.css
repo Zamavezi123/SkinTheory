@@ -1,0 +1,1044 @@
+/* =========================================================
+   SKIN THEORY - CSS STYLESHEET
+   CSS Styling for Desktop, Tablet and Mobile
+   ========================================================= */
+
+/* =========================================================
+   1. GLOBAL / DEFAULT STYLES
+   ========================================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #3f3a35;
+    background-color: #faf7f2;
+}
+
+/* Main page container */
+body > header,
+body > nav,
+body > main,
+body > footer,
+body > p,
+body > hr {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* =========================================================
+   2. TYPOGRAPHY
+   ========================================================= */
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: Georgia, "Times New Roman", serif;
+    color: #5a4638;
+    line-height: 1.25;
+}
+
+h1 {
+    font-size: 3rem;
+    margin: 0 0 20px;
+    letter-spacing: 0.5px;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-top: 45px;
+    margin-bottom: 18px;
+}
+
+h3 {
+    font-size: 1.35rem;
+    margin: 15px 0 8px;
+}
+
+h4 {
+    font-size: 1.15rem;
+    margin-bottom: 12px;
+}
+
+p {
+    margin-top: 0;
+    margin-bottom: 18px;
+}
+
+small {
+    font-size: 0.85rem;
+}
+
+/* =========================================================
+   3. LINKS
+   ========================================================= */
+
+a {
+    color: #7b5e45;
+    text-decoration: none;
+    font-weight: 600;
+    transition:
+        color 0.25s ease,
+        background-color 0.25s ease,
+        text-decoration 0.25s ease;
+}
+
+a:hover {
+    color: #4f3a2d;
+    text-decoration: underline;
+}
+
+a:active {
+    color: #a66a45;
+}
+
+a:focus-visible {
+    outline: 3px solid #c79b73;
+    outline-offset: 3px;
+    border-radius: 3px;
+}
+
+/* =========================================================
+   4. PROMOTIONAL BANNER
+   ========================================================= */
+
+body > p:first-child {
+    max-width: none;
+    margin: 0;
+    padding: 10px 20px;
+    text-align: center;
+    background-color: #e9ddd0;
+    color: #4f4035;
+}
+
+body > p:first-child a {
+    color: #684b37;
+}
+
+/* =========================================================
+   5. HORIZONTAL RULES
+   ========================================================= */
+
+hr {
+    border: 0;
+    border-top: 1px solid #d8c9ba;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+/* =========================================================
+   6. HEADER
+   ========================================================= */
+
+header {
+    min-height: 145px;
+    padding: 20px 35px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    background-color: #fffdf9;
+}
+
+header img {
+    display: block;
+    width: 220px;
+    height: auto;
+    max-width: 100%;
+    object-fit: contain;
+}
+
+header form {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 0;
+}
+
+header form label {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+header > p {
+    margin: 0;
+    white-space: nowrap;
+}
+
+/* =========================================================
+   7. NAVIGATION
+   ========================================================= */
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 5px;
+    padding: 17px 20px;
+    background-color: #6d5746;
+    text-align: center;
+}
+
+/* Hide the literal | separators used in the original HTML */
+nav {
+    color: transparent;
+}
+
+nav a {
+    display: inline-block;
+    padding: 9px 18px;
+    color: #ffffff;
+    border-radius: 5px;
+    font-weight: 700;
+    text-decoration: none;
+    transition:
+        background-color 0.25s ease,
+        color 0.25s ease,
+        transform 0.25s ease;
+}
+
+nav a:hover {
+    background-color: #d9c2aa;
+    color: #4d3b2e;
+    text-decoration: none;
+    transform: translateY(-2px);
+}
+
+nav a:active {
+    background-color: #c19b7b;
+    color: #ffffff;
+    transform: translateY(0);
+}
+
+nav a:focus-visible {
+    outline: 3px solid #ffffff;
+    outline-offset: 2px;
+}
+
+/* =========================================================
+   8. MAIN CONTENT
+   ========================================================= */
+
+main {
+    padding: 55px 45px;
+    background-color: #fffdf9;
+    min-height: 500px;
+}
+
+main > p {
+    max-width: 850px;
+}
+
+main img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* =========================================================
+   9. HERO SECTION
+   ========================================================= */
+
+#hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 45px;
+    padding: 45px 20px 60px;
+}
+
+#hero h1 {
+    font-size: 3.2rem;
+}
+
+#hero p {
+    font-size: 1.1rem;
+    max-width: 600px;
+}
+
+#hero img {
+    width: 100%;
+    max-width: 640px;
+    height: 420px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(75, 56, 42, 0.15);
+}
+
+/* =========================================================
+   10. BUTTONS
+   ========================================================= */
+
+button,
+input[type="submit"] {
+    border: 0;
+    border-radius: 6px;
+    padding: 12px 22px;
+    background-color: #765a44;
+    color: #ffffff;
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition:
+        background-color 0.25s ease,
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+button:hover,
+input[type="submit"]:hover {
+    background-color: #4f3a2d;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 12px rgba(60, 45, 35, 0.2);
+}
+
+button:active,
+input[type="submit"]:active {
+    transform: translateY(0);
+    box-shadow: none;
+}
+
+button:focus-visible,
+input[type="submit"]:focus-visible {
+    outline: 3px solid #c79b73;
+    outline-offset: 3px;
+}
+
+/* =========================================================
+   11. SEARCH
+   ========================================================= */
+
+input[type="search"] {
+    min-width: 230px;
+    padding: 11px 13px;
+    border: 1px solid #cbbbad;
+    border-radius: 6px;
+    background-color: #ffffff;
+    color: #3f3a35;
+    font-family: inherit;
+}
+
+input[type="search"]:focus {
+    border-color: #8b6b50;
+    outline: 2px solid #d8b99b;
+    outline-offset: 1px;
+}
+
+/* =========================================================
+   12. TRUST BADGES
+   ========================================================= */
+
+#trust {
+    padding: 25px 0;
+}
+
+#trust table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #d5c5b5;
+    background-color: #f7f0e8;
+}
+
+#trust caption {
+    padding: 15px;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1.4rem;
+    color: #5a4638;
+}
+
+#trust td {
+    width: 25%;
+    padding: 25px 15px;
+    border: 1px solid #d5c5b5;
+    text-align: center;
+}
+
+#trust td strong {
+    display: block;
+    margin-bottom: 6px;
+    color: #654b38;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1.1rem;
+}
+
+/* =========================================================
+   13. FEATURED PRODUCTS
+   ========================================================= */
+
+#featured {
+    padding: 25px 0;
+}
+
+#featured > table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 20px;
+}
+
+#featured td {
+    width: 33.333%;
+    padding: 25px;
+    vertical-align: top;
+    background-color: #f7f0e8;
+    border: 1px solid #dfd0c0;
+    border-radius: 10px;
+    text-align: center;
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+#featured td:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(75, 56, 42, 0.14);
+}
+
+#featured img {
+    width: 220px;
+    max-width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* =========================================================
+   14. FAQ
+   ========================================================= */
+
+#faq {
+    padding: 20px 0 40px;
+}
+
+#faq details {
+    margin-bottom: 12px;
+    padding: 18px 22px;
+    border: 1px solid #d8c8b8;
+    border-radius: 7px;
+    background-color: #f8f2eb;
+    transition: background-color 0.25s ease;
+}
+
+#faq details:hover {
+    background-color: #f1e7dc;
+}
+
+#faq summary {
+    color: #5a4638;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1.05rem;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+#faq summary:focus-visible {
+    outline: 3px solid #c79b73;
+    outline-offset: 3px;
+}
+
+#faq details p {
+    margin-top: 15px;
+    margin-bottom: 0;
+}
+
+/* =========================================================
+   15. PRODUCT GRID
+   ========================================================= */
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+    margin-top: 35px;
+}
+
+.product-card {
+    display: flex;
+    flex-direction: column;
+    padding: 22px;
+    background-color: #f8f2eb;
+    border: 1px solid #dfd0c0;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(70, 50, 35, 0.08);
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 25px rgba(70, 50, 35, 0.16);
+}
+
+.product-card img {
+    display: block;
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    border-radius: 7px;
+    margin-bottom: 10px;
+}
+
+.product-card h3 {
+    margin-top: 8px;
+}
+
+.product-card p {
+    flex-grow: 1;
+}
+
+.product-card a {
+    display: inline-block;
+    align-self: flex-start;
+    margin-top: auto;
+    padding: 9px 14px;
+    border-radius: 5px;
+    background-color: #765a44;
+    color: #ffffff;
+}
+
+.product-card a:hover {
+    background-color: #4f3a2d;
+    text-decoration: none;
+}
+
+/* =========================================================
+   16. PRODUCTS PAGE
+   ========================================================= */
+
+#product-index {
+    margin-top: 50px;
+}
+
+main section[id] {
+    scroll-margin-top: 20px;
+}
+
+/* Product sections on products.html */
+main > section {
+    margin-bottom: 45px;
+    padding: 25px;
+    border-radius: 10px;
+}
+
+main > section:nth-of-type(even) {
+    background-color: #f8f2eb;
+}
+
+/* Product images */
+main > section img {
+    display: block;
+    max-width: 100%;
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin: 15px 0 20px;
+}
+
+/* =========================================================
+   17. ABOUT PAGE
+   ========================================================= */
+
+main > img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 25px auto;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(70, 50, 35, 0.12);
+}
+
+main > img + p {
+    text-align: center;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1.4rem;
+    color: #765a44;
+    letter-spacing: 2px;
+}
+
+/* =========================================================
+   18. CONTACT PAGE
+   ========================================================= */
+
+.location {
+    margin: 25px 0;
+    padding: 25px;
+    background-color: #f8f2eb;
+    border-left: 5px solid #9d7a5b;
+    border-radius: 0 8px 8px 0;
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.location:hover {
+    transform: translateX(5px);
+    box-shadow: 0 6px 18px rgba(70, 50, 35, 0.12);
+}
+
+.location h2 {
+    margin-top: 0;
+}
+
+/* =========================================================
+   19. ENQUIRY FORM
+   ========================================================= */
+
+main form:not([role="search"]) {
+    max-width: 700px;
+    margin: 30px auto;
+    padding: 30px;
+    background-color: #f8f2eb;
+    border: 1px solid #dfd0c0;
+    border-radius: 10px;
+    box-shadow: 0 5px 18px rgba(70, 50, 35, 0.08);
+}
+
+main form:not([role="search"]) label {
+    display: block;
+    margin-top: 18px;
+    margin-bottom: 7px;
+    color: #5a4638;
+    font-weight: 700;
+}
+
+main form:not([role="search"]) input[type="text"],
+main form:not([role="search"]) input[type="email"],
+main form:not([role="search"]) textarea {
+    display: block;
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid #cdbdad;
+    border-radius: 6px;
+    background-color: #ffffff;
+    color: #3f3a35;
+    font-family: inherit;
+    font-size: 1rem;
+    transition:
+        border-color 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+main form:not([role="search"]) textarea {
+    min-height: 140px;
+    resize: vertical;
+}
+
+main form:not([role="search"]) input:focus,
+main form:not([role="search"]) textarea:focus {
+    border-color: #8b6b50;
+    box-shadow: 0 0 0 3px rgba(199, 155, 115, 0.25);
+    outline: none;
+}
+
+main form:not([role="search"]) input:invalid,
+main form:not([role="search"]) textarea:invalid {
+    border-color: #c98f7c;
+}
+
+main form:not([role="search"]) input[type="submit"] {
+    margin-top: 25px;
+}
+
+/* =========================================================
+   20. FOOTER
+   ========================================================= */
+
+footer {
+    padding: 45px;
+    background-color: #4f4035;
+    color: #f8f2eb;
+}
+
+footer table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+footer td {
+    width: 25%;
+    padding: 15px;
+    vertical-align: top;
+}
+
+footer h4 {
+    margin-top: 0;
+    color: #ffffff;
+}
+
+footer a {
+    color: #ead8c7;
+}
+
+footer a:hover {
+    color: #ffffff;
+}
+
+footer p {
+    margin-bottom: 0;
+    text-align: center;
+}
+
+footer small {
+    color: #dfd2c7;
+}
+
+/* =========================================================
+   21. IMAGE RESPONSIVENESS
+   ========================================================= */
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* =========================================================
+   22. TABLET RESPONSIVE DESIGN
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+    body {
+        font-size: 15px;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    h2 {
+        font-size: 1.75rem;
+    }
+
+    header {
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+        padding: 20px;
+    }
+
+    header form {
+        order: 3;
+        width: 100%;
+        justify-content: center;
+    }
+
+    header > p {
+        order: 2;
+    }
+
+    nav {
+        gap: 3px;
+        padding: 12px;
+    }
+
+    nav a {
+        padding: 8px 12px;
+    }
+
+    main {
+        padding: 40px 30px;
+    }
+
+    #hero {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 30px;
+    }
+
+    #hero p {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #hero img {
+        margin: 0 auto;
+        height: 350px;
+    }
+
+    #featured > table {
+        border-spacing: 10px;
+    }
+
+    #featured td {
+        padding: 18px 12px;
+    }
+
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    footer {
+        padding: 35px 25px;
+    }
+
+    footer table,
+    footer tbody,
+    footer tr {
+        display: block;
+        width: 100%;
+    }
+
+    footer tr {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    footer td {
+        width: auto;
+    }
+}
+
+/* =========================================================
+   23. MOBILE RESPONSIVE DESIGN
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+    body {
+        font-size: 14px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+        margin-top: 30px;
+    }
+
+    h3 {
+        font-size: 1.2rem;
+    }
+
+    body > p:first-child {
+        padding: 9px 12px;
+        font-size: 0.8rem;
+    }
+
+    header {
+        min-height: auto;
+        padding: 18px 15px;
+        gap: 15px;
+    }
+
+    header img {
+        width: 170px;
+    }
+
+    header form {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    input[type="search"] {
+        width: 100%;
+        min-width: 0;
+    }
+
+    header form button {
+        width: 100%;
+    }
+
+    nav {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 4px;
+        padding: 8px;
+    }
+
+    nav a {
+        padding: 10px 5px;
+        font-size: 0.9rem;
+        text-align: center;
+    }
+
+    main {
+        padding: 30px 18px;
+    }
+
+    #hero {
+        padding: 25px 5px 40px;
+    }
+
+    #hero h1 {
+        font-size: 2.1rem;
+    }
+
+    #hero p {
+        font-size: 1rem;
+    }
+
+    #hero img {
+        height: 250px;
+        border-radius: 8px;
+    }
+
+    /* Trust table becomes vertical */
+    #trust table,
+    #trust tbody,
+    #trust tr {
+        display: block;
+        width: 100%;
+    }
+
+    #trust td {
+        display: block;
+        width: 100%;
+        border-bottom: 0;
+    }
+
+    #trust td:last-child {
+        border-bottom: 1px solid #d5c5b5;
+    }
+
+    /* Featured products become one column */
+    #featured > table,
+    #featured tbody,
+    #featured tr {
+        display: block;
+        width: 100%;
+    }
+
+    #featured td {
+        display: block;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    #featured img {
+        width: 200px;
+        height: 200px;
+    }
+
+    /* Product grid becomes one column */
+    .product-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .product-card {
+        padding: 18px;
+    }
+
+    .product-card img {
+        height: 240px;
+    }
+
+    /* FAQ */
+    #faq details {
+        padding: 15px;
+    }
+
+    #faq summary {
+        font-size: 0.95rem;
+    }
+
+    /* Contact */
+    .location {
+        padding: 18px;
+    }
+
+    /* Enquiry form */
+    main form:not([role="search"]) {
+        padding: 20px 16px;
+    }
+
+    /* Footer */
+    footer {
+        padding: 30px 18px;
+    }
+
+    footer tr {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    footer td {
+        padding: 10px 0;
+    }
+}
+
+/* =========================================================
+   24. SMALL MOBILE PHONES
+   ========================================================= */
+
+@media (max-width: 420px) {
+
+    h1 {
+        font-size: 1.75rem;
+    }
+
+    h2 {
+        font-size: 1.35rem;
+    }
+
+    header img {
+        width: 145px;
+    }
+
+    nav {
+        grid-template-columns: 1fr;
+    }
+
+    nav a {
+        width: 100%;
+    }
+
+    #hero h1 {
+        font-size: 1.8rem;
+    }
+
+    #hero img {
+        height: 210px;
+    }
+
+    button,
+    input[type="submit"] {
+        width: 100%;
+    }
+
+    .product-card img {
+        height: 210px;
+    }
+}
+
+/* =========================================================
+   25. ACCESSIBILITY / REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        transition: none !important;
+        animation: none !important;
+    }
+}

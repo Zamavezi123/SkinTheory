@@ -1,2 +1,0 @@
-# SkinTheory
-Web development assignement 
