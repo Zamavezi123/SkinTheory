@@ -90,8 +90,9 @@
     /* ---------- Filter buttons ---------- */
     function applyFilter(category) {
         cells.forEach(function (cell) {
-            cell.hidden = category !== 'all' && cell.dataset.category !== category;
-        });
+                       var hide = category !== 'all' && cell.dataset.category !== category;
+            cell.hidden = hide;
+            cell.style.display = hide ? 'none' : '';
         visible = cells.filter(function (c) { return !c.hidden; })
                        .map(function (c) { return c.querySelector('a'); });
         Array.prototype.forEach.call(filterBar.querySelectorAll('button'), function (b) {

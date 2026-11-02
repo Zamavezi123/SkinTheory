@@ -1864,4 +1864,84 @@ dialog.lightbox::backdrop { background: rgba(20, 12, 8, 0.92); }
         font-size: 16px;
     }
 
+}/* =========================================================
+   PART 3 - POLISHED HEADER, LOGO AND ANIMATIONS
+   (pure CSS, switched off automatically for visitors who
+   prefer reduced motion)
+   ========================================================= */
+
+/* ----- Header: soft gradient and a fine divider ----- */
+header {
+    background: linear-gradient(120deg, #fffdf9 0%, #f8efe4 100%);
+    border-bottom: 1px solid #eadccb;
+}
+
+/* ----- Logo: transparent PNG that blends in, fades in, lifts on hover ----- */
+header img {
+    animation: logoIn 0.9s ease both;
+    transition: transform 0.4s ease, filter 0.4s ease;
+}
+header a:hover img, header a:focus-visible img {
+    transform: scale(1.04);
+    filter: drop-shadow(0 6px 10px rgba(93, 64, 45, 0.25));
+}
+@media (min-width: 901px) {
+    header img { width: 260px; }
+}
+@keyframes logoIn {
+    from { opacity: 0; transform: translateY(-14px) scale(0.96); }
+    to { opacity: 1; transform: none; }
+}
+
+/* ----- Promo banner and header search fade in ----- */
+body > p:first-child { animation: fadeDown 0.6s ease both; }
+header form, header > p { animation: fadeUp 0.8s ease 0.25s both; }
+
+/* ----- Navigation: underline that grows from the centre ----- */
+nav a { position: relative; }
+nav a::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 4px;
+    width: 0;
+    height: 2px;
+    background-color: #fff;
+    border-radius: 2px;
+    transform: translateX(-50%);
+    transition: width 0.3s ease;
+}
+nav a:hover::after, nav a:focus-visible::after { width: 55%; background-color: #4d3b2e; }
+
+/* ----- Home page hero: staggered entrance ----- */
+#hero h1 { animation: fadeUp 0.8s ease 0.15s both; }
+#hero p { animation: fadeUp 0.8s ease 0.35s both; }
+#hero form { animation: fadeUp 0.8s ease 0.5s both; }
+#hero img { animation: heroImgIn 1.2s ease 0.4s both; border-radius: 12px; }
+
+/* gentle pulse that invites a click on the main button */
+#hero button { animation: pulseRing 2.6s ease-out 1.8s infinite; }
+#hero button:hover { animation: none; transform: translateY(-3px); box-shadow: 0 8px 18px rgba(77, 59, 46, 0.3); }
+
+/* ----- Cards lift on hover ----- */
+.product-card { animation: cardFadeIn 0.4s ease backwards; transition: transform 0.3s ease, box-shadow 0.3s ease; }
+.product-card:hover { transform: translateY(-6px); box-shadow: 0 12px 24px rgba(77, 59, 46, 0.18); }
+
+/* ----- Keyframes ----- */
+@keyframes fadeUp { from { opacity: 0; transform: translateY(22px); } to { opacity: 1; transform: none; } }
+@keyframes fadeDown { from { opacity: 0; transform: translateY(-12px); } to { opacity: 1; transform: none; } }
+@keyframes heroImgIn { from { opacity: 0; transform: scale(1.06); } to { opacity: 1; transform: none; } }
+@keyframes pulseRing {
+    0% { box-shadow: 0 0 0 0 rgba(109, 87, 70, 0.55); }
+    70% { box-shadow: 0 0 0 16px rgba(109, 87, 70, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(109, 87, 70, 0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    header img, header form, header > p, body > p:first-child,
+    #hero h1, #hero p, #hero form, #hero img, #hero button, .product-card {
+        animation: none;
+    }
+    header a:hover img, .product-card:hover, #hero button:hover { transform: none; }
+    nav a::after { transition: none; }
 }
