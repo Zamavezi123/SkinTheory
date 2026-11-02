@@ -32,8 +32,7 @@ overall look, spacing, and usability across every page
 
 |02/11/2026|Added gallery.html and js/lightbox.js: a filterable photo gallery whose images open in a lightbox with previous/next controls, keyboard and swipe support, and a focus-safe native dialog. Added a Gallery link to the navigation on every page|
 
-*(Fill in actual dates for each entry — I've left them as TBD since I don't have your
-build timeline. Add more rows here as you keep working.)*
+
 
 ### Responsive Design Testing
 

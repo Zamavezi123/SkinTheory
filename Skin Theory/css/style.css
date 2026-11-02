@@ -1727,4 +1727,141 @@ dialog.lightbox::backdrop { background: rgba(20, 12, 8, 0.92); }
         font-size: 16px;
     }
 
+}/* ==========================================
+   SKIN THEORY CONTACT FORM
+========================================== */
+
+.contact-form-section {
+    max-width: 750px;
+    margin: 50px auto;
+    padding: 30px;
+    background: #f8f1e9;
+    border-left: 4px solid #9a795e;
+    box-sizing: border-box;
+}
+
+.contact-form-section h2 {
+    color: #70513c;
+    margin-top: 0;
+}
+
+.contact-form-section > p {
+    line-height: 1.6;
+}
+
+#contactForm label {
+    display: block;
+    margin-top: 18px;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+#contactForm input:not([type="checkbox"]):not([type="radio"]),
+#contactForm select,
+#contactForm textarea {
+    width: 100%;
+    padding: 12px;
+    box-sizing: border-box;
+    border: 1px solid #cbb8a6;
+    border-radius: 5px;
+    background: #fffdf9;
+    font-family: inherit;
+    font-size: 15px;
+}
+
+#contactForm input:focus,
+#contactForm select:focus,
+#contactForm textarea:focus {
+    outline: 2px solid #80634d;
+    outline-offset: 2px;
+}
+
+#contactForm fieldset {
+    margin-top: 20px;
+    padding: 15px;
+    border: 1px solid #cbb8a6;
+    border-radius: 5px;
+}
+
+#contactForm legend {
+    padding: 0 8px;
+    font-weight: 600;
+}
+
+#contactForm .contact-choice {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin: 12px 0;
+    font-weight: normal;
+}
+
+#contactForm input[type="checkbox"],
+#contactForm input[type="radio"] {
+    margin-top: 4px;
+    flex-shrink: 0;
+}
+
+#contactForm .contact-error {
+    display: block;
+    margin-top: 5px;
+    color: #b42318;
+    font-size: 13px;
+}
+
+#contactForm button[type="submit"],
+.contact-email-button {
+    display: inline-block;
+    margin-top: 24px;
+    padding: 13px 22px;
+    border: none;
+    border-radius: 5px;
+    background: #705743;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#contactForm button[type="submit"]:hover,
+.contact-email-button:hover {
+    background: #513c2d;
+}
+
+#contactResponse {
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.contact-form-error {
+    color: #b42318;
+    background: #fff0ee;
+    border: 1px solid #e5a09a;
+}
+
+.contact-form-success {
+    color: #216e39;
+    background: #eef8ef;
+    border: 1px solid #9bc9a4;
+}
+
+#contactEmailLink {
+    margin-top: 10px;
+}
+
+@media (max-width: 600px) {
+
+    .contact-form-section {
+        margin: 25px 10px;
+        padding: 20px;
+    }
+
+    #contactForm input:not([type="checkbox"]):not([type="radio"]),
+    #contactForm select,
+    #contactForm textarea {
+        font-size: 16px;
+    }
+
 }
