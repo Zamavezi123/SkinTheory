@@ -23,9 +23,15 @@
 
 <main>
 
+<main>
+
 <h1>About us</h1>
 
-<h2>Our Story</h2>
+<!-- Tabs are built by js/main.js. Without JavaScript every section is simply shown one after the other. -->
+<div id="about-tabs" class="tabs">
+
+<section class="tab-panel" id="panel-story" data-title="Our Story">
+<h2 id="story">Our Story</h2>
 <p>Skin Theory was founded in 1987 in London, born from a belief that true luxury lies
 in restraint rather than excess. In a market saturated with sprawling skincare ranges,
 we chose the opposite path. We have committed to two categories to ensure we perfect
@@ -34,32 +40,43 @@ of our products, your skin will feel rejuvenated, nourished, and noticeably radi
 Every formulation is developed carefully with natural ingredients, as we are a brand
 that excels in quality to ensure you have bright, soft, and smooth skin.</p>
 
-<img src="images/the owner.png" alt="Founder of Skin Theory" width="400">
+<img src="images/skin-theory-founder.webp" alt="Founder of Skin Theory" width="400">
 
 <p><strong>WE ARE THE GLOW FORMULA</strong></p>
+</section>
 
-<h2>Mission</h2>
+<section class="tab-panel" id="panel-mission" data-title="Mission">
+<h2 id="mission">Mission</h2>
 <p>To craft body care essentials of uncompromising quality, while celebrating every
 skin tone, type, and story. We ensure you feel confident in your skin without
 compromise because healthy, luminous skin is the foundation of feeling good.</p>
+</section>
 
-<h2>Vision</h2>
+<section class="tab-panel" id="panel-vision" data-title="Vision">
+<h2 id="vision">Vision</h2>
 <p>Our vision as Skin Theory is to be regarded as a benchmark British name in natural
 body care, defined by refinement rather than sheer product volume.</p>
 
-<img src="images/main about us.jpg" alt="Skin Theory studio" width="400">
+<img src="images/skin-theory-studio.jpg" alt="Skin Theory studio" width="400">
+</section>
 
-<h2>Our Philosophy</h2>
+<section class="tab-panel" id="panel-philosophy" data-title="Our Philosophy">
+<h2 id="philosophy">Our Philosophy</h2>
 <p>Skin thrives when you keep it simple, especially with Skin Theory providing strong
 results with a gentle approach.</p>
 <p>We provide no toxins, no drama, just letting your skin breathe. You don't have to
 strip, peel, burn, or harm your skin to see your results.</p>
+</section>
+
+</div>
 
 </main>
 
 <footer>
 <p>&copy; 2026 Skin Theory. Made in the UK.</p>
 </footer>
+<script src="js/cart.js"></script>
+<script src="js/main.js"></script>
 
 </body>
 </html>
