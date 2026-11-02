@@ -27,21 +27,190 @@
 <p>Whether you have a question about our formulations, would like to check stock,
 or wish to place an order, we would be happy to hear from you.</p>
 
-<form action="thankyou.html" method="get">
+<!-- Skin Theory Enquiry Form -->
 
-<label for="fullname">Full name (required)</label>
-<input type="text" id="fullname" name="Full Name" required>
+<form id="enquiryForm" novalidate>
 
-<label for="email">Email address (required)</label>
-<input type="email" id="email" name="Email" required>
+    <!-- Full Name -->
+    <label for="fullname">Full Name *</label>
+    <input
+        type="text"
+        id="fullname"
+        name="fullname"
+        placeholder="Enter your full name"
+        required
+    >
+    <small class="error-message" id="fullnameError"></small>
 
-<label for="phone">Phone number (optional)</label>
-<input type="text" id="phone" name="Phone">
 
-<label for="message">Enquiry message (required)</label>
-<textarea id="message" name="Message" rows="5" required></textarea>
+    <!-- Email Address -->
+    <label for="email">Email Address *</label>
+    <input
+        type="email"
+        id="email"
+        name="email"
+        placeholder="Enter your email address"
+        required
+    >
+    <small class="error-message" id="emailError"></small>
 
-<input type="submit" value="Send Enquiry">
+
+    <!-- Phone Number -->
+    <label for="phone">Phone Number (optional)</label>
+    <input
+        type="tel"
+        id="phone"
+        name="phone"
+        placeholder="Enter your phone number"
+    >
+    <small class="error-message" id="phoneError"></small>
+
+
+    <!-- Enquiry Type Dropdown -->
+    <label for="enquiryType">What is your enquiry about? *</label>
+
+    <select id="enquiryType" name="enquiryType" required>
+        <option value="">-- Select an enquiry type --</option>
+        <option value="product">Product enquiry</option>
+        <option value="order">Order enquiry</option>
+        <option value="skincare">Skincare advice</option>
+        <option value="bulk">Bulk purchase enquiry</option>
+        <option value="other">Other</option>
+    </select>
+
+    <small class="error-message" id="enquiryTypeError"></small>
+
+
+    <!-- Product Dropdown -->
+    <label for="product">Select a Product *</label>
+
+    <select id="product" name="product" required>
+
+        <option value="">-- Choose a product --</option>
+
+        <optgroup label="Body Oils">
+            <option value="650">Botanical Bliss - R650</option>
+            <option value="600">Natura Glow - R600</option>
+            <option value="300">Pure Roots - R300</option>
+            <option value="950">Barrier Repair Oil - R950</option>
+            <option value="1050">Dermacare Sensitive Oil - R1050</option>
+            <option value="850">Cloud Skin - R850</option>
+            <option value="520">Vanilla Cloud - R520</option>
+            <option value="550">Strawberry Smooth - R550</option>
+            <option value="550">Coconut Glow - R550</option>
+        </optgroup>
+
+        <optgroup label="Body Lotions">
+            <option value="600">Smooth Theory - R600</option>
+            <option value="550">Elastic Glow - R550</option>
+            <option value="620">Mother and Me - R620</option>
+            <option value="920">Cloud Skin Lotion - R920</option>
+            <option value="580">Daily Dew - R580</option>
+            <option value="600">Glow Lo - R600</option>
+            <option value="630">Skin Renewal - R630</option>
+        </optgroup>
+
+        <optgroup label="Gift Sets">
+            <option value="1200">Glow Starter Set - R1200</option>
+            <option value="2500">Luxury Spa Set - R2500</option>
+            <option value="1800">Stretch Mark Care Set - R1800</option>
+            <option value="2100">Sensitive Skin Set - R2100</option>
+            <option value="1500">Sweet Treat Set - R1500</option>
+        </optgroup>
+
+    </select>
+
+    <small class="error-message" id="productError"></small>
+
+
+    <!-- Quantity -->
+    <label for="quantity">Quantity *</label>
+
+    <input
+        type="number"
+        id="quantity"
+        name="quantity"
+        min="1"
+        max="20"
+        value="1"
+        required
+    >
+
+    <small class="error-message" id="quantityError"></small>
+
+
+    <!-- Additional Options -->
+    <fieldset>
+
+        <legend>Additional Preferences</legend>
+
+        <label class="checkbox-label">
+            <input
+                type="checkbox"
+                id="recommendations"
+                name="recommendations"
+                value="yes"
+            >
+            I would like product recommendations.
+        </label>
+
+        <label class="checkbox-label">
+            <input
+                type="checkbox"
+                id="phoneContact"
+                name="phoneContact"
+                value="yes"
+            >
+            I would prefer to be contacted by phone.
+        </label>
+
+    </fieldset>
+
+
+    <!-- Enquiry Message -->
+    <label for="message">Your Enquiry Message *</label>
+
+    <textarea
+        id="message"
+        name="message"
+        rows="5"
+        placeholder="Tell us how we can help you..."
+        required
+    ></textarea>
+
+    <small class="error-message" id="messageError"></small>
+
+
+    <!-- Consent -->
+    <label class="checkbox-label">
+        <input
+            type="checkbox"
+            id="consent"
+            name="consent"
+            required
+        >
+        I agree that Skin Theory may contact me about this enquiry. *
+    </label>
+
+    <small class="error-message" id="consentError"></small>
+
+
+    <!-- Submit Button -->
+    <button type="submit">Submit Enquiry</button>
+
+    <!-- Form Response -->
+    <div
+        id="formResponse"
+        role="status"
+        aria-live="polite"
+    ></div>
+
+    <!-- Quotation Response -->
+    <div
+        id="quotationResponse"
+        aria-live="polite"
+    ></div>
+
 </form>
 
 </main>
@@ -51,6 +220,7 @@ or wish to place an order, we would be happy to hear from you.</p>
 </footer>
 <script src="js/cart.js"></script>
 <script src="js/main.js"></script>
+<script src="js/enquiry.js"></script>
 
 </body>
 </html>

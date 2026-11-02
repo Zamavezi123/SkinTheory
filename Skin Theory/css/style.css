@@ -1597,4 +1597,134 @@ dialog.lightbox::backdrop { background: rgba(20, 12, 8, 0.92); }
         height: 300px;
     }
 
+}/* ==========================================
+   SKIN THEORY ENQUIRY FORM
+========================================== */
+
+#enquiryForm {
+    max-width: 750px;
+    margin: 30px auto;
+}
+
+#enquiryForm label {
+    display: block;
+    margin-top: 18px;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+#enquiryForm input:not([type="checkbox"]),
+#enquiryForm select,
+#enquiryForm textarea {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    box-sizing: border-box;
+    border: 1px solid #cbb8a6;
+    border-radius: 5px;
+    background: #fffdf9;
+    font-family: inherit;
+    font-size: 15px;
+}
+
+#enquiryForm input:focus,
+#enquiryForm select:focus,
+#enquiryForm textarea:focus {
+    outline: 2px solid #80634d;
+    outline-offset: 2px;
+}
+
+#enquiryForm fieldset {
+    margin-top: 20px;
+    padding: 15px;
+    border: 1px solid #cbb8a6;
+    border-radius: 5px;
+}
+
+#enquiryForm legend {
+    padding: 0 8px;
+    font-weight: 600;
+}
+
+#enquiryForm .checkbox-label {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin: 12px 0;
+    font-weight: normal;
+}
+
+#enquiryForm input[type="checkbox"] {
+    margin-top: 4px;
+    flex-shrink: 0;
+}
+
+#enquiryForm .error-message {
+    display: block;
+    margin-top: 5px;
+    color: #b42318;
+    font-size: 13px;
+}
+
+#formResponse,
+#quotationResponse {
+    margin-top: 25px;
+    padding: 18px;
+    border-radius: 6px;
+}
+
+.form-error {
+    color: #b42318;
+    background: #fff0ee;
+    border: 1px solid #e5a09a;
+}
+
+.form-success {
+    color: #216e39;
+    background: #eef8ef;
+    border: 1px solid #9bc9a4;
+}
+
+#quotationResponse {
+    background: #f7efe5;
+    border: 1px solid #cbb8a6;
+}
+
+#quotationResponse h2 {
+    margin-top: 0;
+    color: #704f39;
+}
+
+#quotationResponse p {
+    line-height: 1.6;
+}
+
+#enquiryForm button[type="submit"] {
+    margin-top: 25px;
+    padding: 13px 24px;
+    border: none;
+    border-radius: 5px;
+    background: #705743;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#enquiryForm button[type="submit"]:hover {
+    background: #513c2d;
+}
+
+@media (max-width: 600px) {
+
+    #enquiryForm {
+        width: 100%;
+    }
+
+    #enquiryForm input:not([type="checkbox"]),
+    #enquiryForm select,
+    #enquiryForm textarea {
+        font-size: 16px;
+    }
+
 }
